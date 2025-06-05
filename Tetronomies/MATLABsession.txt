@@ -1,0 +1,204 @@
+[Warning: Function zeros has the same name as a MATLAB builtin. We suggest you rename the function to avoid
+a potential name conflict.] 
+m = [1 2 5; 4 7 8; 2 4 6]sum(m)
+ m = [1 2 5; 4 7 8; 2 4 6]sum(m)
+                          ↑
+{Invalid expression. Check for missing multiplication operator, missing or unbalanced delimiters, or other
+syntax error. To construct matrices, use brackets instead of parentheses.
+} 
+m = [1 2 5; 4 7 8; 2 4 6]
+
+m =
+
+     1     2     5
+     4     7     8
+     2     4     6
+
+sum(m)
+
+ans =
+
+     7    13    19
+
+diag(m)
+
+ans =
+
+     1
+     7
+     6
+
+sum(m')
+
+ans =
+
+     8    19    12
+
+diag(m')
+
+ans =
+
+     1
+     7
+     6
+
+m(:,1)
+
+ans =
+
+     1
+     4
+     2
+
+m(1,:)
+
+ans =
+
+     1     2     5
+
+m(:,1) == 1
+
+ans =
+
+  3×1 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1
+   0
+   0
+
+m(1,:) < 5
+
+ans =
+
+  1×3 <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a> array
+
+   1   1   0
+
+ any(m(1,:)) < 5
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+all(m(:,1) == 1)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   0
+
+all(m(:,1) > 0)
+
+ans =
+
+  <a href="matlab:helpPopup logical" style="font-weight:bold">logical</a>
+
+   1
+
+a = [1 3 5]
+
+a =
+
+     1     3     5
+
+ b = [2 ; 4 ; 6]
+
+b =
+
+     2
+     4
+     6
+
+c = [5 3 6]
+
+c =
+
+     5     3     6
+
+length (a)
+
+ans =
+
+     3
+
+ a .* c
+
+ans =
+
+     5     9    30
+
+a .^ 2
+
+ans =
+
+     1     9    25
+
+A = [1 2 4;   5 6 7;   8 10 11]
+
+A =
+
+     1     2     4
+     5     6     7
+     8    10    11
+
+ B  =  A([2 3],[1 2])
+
+B =
+
+     5     6
+     8    10
+
+A = [2 5 7;  3 5 6]
+
+A =
+
+     2     5     7
+     3     5     6
+
+ B = [1 4 2;  2 3 5]
+
+B =
+
+     1     4     2
+     2     3     5
+
+A.*B
+
+ans =
+
+     2    20    14
+     6    15    30
+
+A*B
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('mtimes')" style="font-weight:bold"> * </a>
+Incorrect dimensions for matrix multiplication. Check that the number of columns in the first matrix
+matches the number of rows in the second matrix. To perform elementwise multiplication, use '.*'.
+
+<a href="matlab:helpview('matlab','error_innerdim')" style="font-weight:bold">Related documentation</a>
+} 
+A = [1 2 3;4 5 6;7 8 10]
+
+A =
+
+     1     2     3
+     4     5     6
+     7     8    10
+
+B = A’
+ B = A’
+      ↑
+{Error: Invalid text character. Check for unsupported symbol, invisible character, or pasting of non-ASCII
+characters.
+} 
+B = A'
+
+B =
+
+     1     4     7
+     2     5     8
+     3     6    10
+
+diary off
