@@ -1,5 +1,5 @@
 %--------------------------------------------------------------------------
-% FILE TWO: STEREO SPATIALIZATION (FIR CONVOLUTION)
+% STEREO SPATIALIZATION (FIR CONVOLUTION)
 % Description: This section converts a mono signal into a 3D stereo signal 
 % by convolving it with Head-Related Impulse Responses (HRIR).
 %--------------------------------------------------------------------------
